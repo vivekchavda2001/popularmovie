@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+
+    android:scrollbars="none"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorPrimary"
     tools:context=".MovieDetail">
 
     <TextView
@@ -12,14 +18,76 @@
         style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:ellipsize="end"
-        android:fontFamily="serif"
+        android:fontFamily="@font/roboto_bold"
         android:gravity="center"
         android:maxLines="1"
         android:text="Movie Name"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-         />
+        android:textColor="@android:color/white"
+        android:textDirection="firstStrongLtr"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/moviePoster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/popularity"
+                style="@style/textViewDetailMovie"
+                android:text="Details" />
+
+            <TextView
+                android:id="@+id/votecount"
+                style="@style/textViewDetailMovie"
+                android:text="Details" />
+
+            <TextView
+                android:id="@+id/adult"
+                style="@style/textViewDetailMovie"
+                android:text="Details" />
+
+            <TextView
+                android:id="@+id/lang"
+                style="@style/textViewDetailMovie"
+                android:text="Details" />
+
+            <TextView
+                android:id="@+id/voteAvg"
+                style="@style/textViewDetailMovie"
+                android:text="Details" />
+
+            <TextView
+                android:id="@+id/re_date"
+                style="@style/textViewDetailMovie"
+                android:text="Details" />
+
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/overview"
+        style="@style/textViewDetailMovie"
+        android:text="Details"
+        />
 
 
 
@@ -28,4 +96,5 @@
 
 
 
-</LinearLayout>
+
+</LinearLayout></ScrollView>

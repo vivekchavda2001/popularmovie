@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+import java.lang.annotation.Target;
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -40,12 +41,25 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewhol
     public void onBindViewHolder(@NonNull MovieViewholder holder, int position) {
         final Result item = items.get(position);
         holder.movieTitle.setText(item.getTitle());
-        Glide.with(context).load(item.getPosterPath()).fitCenter().into(holder.movieImage);
+        Glide
+                .with(context)
+                .load(item.getPosterPath())
+                .override(500,1000)
+                .fitCenter()
+                .into(holder.movieImage);
         holder.movieImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(context,MovieDetail.class);
                 i.putExtra("title",item.getTitle());
+                i.putExtra("poster",item.getPosterPath());
+                i.putExtra("pop",item.getPopularity().toString());
+                i.putExtra("voa",item.getVoteAverage().toString());
+                i.putExtra("voc",item.getVoteCount().toString());
+                i.putExtra("adlt",item.getAdult().toString());
+                i.putExtra("realDate",item.getReleaseDate());
+                i.putExtra("lan",item.getOriginalLanguage());
+                i.putExtra("overview",item.getOverview());
                 context.startActivity(i);
             }
         });

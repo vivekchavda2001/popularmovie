@@ -6,5 +6,16 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="textViewDetailMovie">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">25sp</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
 
 </resources>
