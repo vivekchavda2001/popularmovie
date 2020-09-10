@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 
 public class FetchMovie {
-    private static final String KEY  = "4e44d9029b1270a757cddc766a1bcb63";
+    private static final String KEY  = "YOUR_API_KEY";
     private static final String URL  = "https://api.themoviedb.org/3/movie/popular/";
     public static MovieService movieService = null;
     public static MovieService getMovieService(){
