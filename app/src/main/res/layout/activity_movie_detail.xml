@@ -78,7 +78,7 @@
                 style="@style/textViewDetailMovie"
                 android:text="Details" />
 
-            />
+
         </LinearLayout>
 
     </LinearLayout>
@@ -86,6 +86,7 @@
     <TextView
         android:id="@+id/overview"
         style="@style/textViewDetailMovie"
+        android:justificationMode="inter_word"
         android:text="Details"
         />
 

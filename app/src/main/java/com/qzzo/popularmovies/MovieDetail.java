@@ -3,6 +3,7 @@ package com.qzzo.popularmovies;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 
 public class MovieDetail extends AppCompatActivity {
+
     TextView title,popularity,votecount,adult,language,votAvg,re_Date,overview;
     ImageView poster;
     @Override
@@ -28,6 +30,7 @@ public class MovieDetail extends AppCompatActivity {
         re_Date =findViewById(R.id.re_date);
         poster = findViewById(R.id.moviePoster);
         Intent i = getIntent();
+
         String title_name = i.getStringExtra("title");
         String PosterPath = i.getStringExtra("poster");
         String pop = i.getStringExtra("pop");
